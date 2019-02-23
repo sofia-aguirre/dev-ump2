@@ -2,16 +2,16 @@
 As part of a coding challenge, I was tasked to make a user management portal with Angular/Typescript. It's my first time using these frameworks, but with the help of several online tutorials, Googling, and the Angular documentation site, was able to complete the following requirements. Although my time is up, I'm committed to completing this challenging project in the days to come!
 
 Requirements Met:
-Angular/Typescript app with Bootstrap tables
-Full CRUD for Users and Roles
-No database was required, but used Node.js/Express
+1. Angular/Typescript app with Bootstrap tables
+2. Full CRUD for Users and Roles
+3. No database was required, but used Node.js/Express
 
 Requirements in progress:
-Users model needs embedeed class expressions for roles
-Roles model needs permissions checkbox arary
-Need ability to export users summary in to a csv with an export button
-Big need for in-depth styling and form validations
-Definitely needs code cleaned up and refactored for better readability and documentation
+1. Users model needs embedeed class expressions for roles
+2. Roles model needs permissions checkbox arary
+3. Need ability to export users summary in to a csv with an export button
+4. Big need for in-depth styling and form validations
+5. Big ugly code needs cleaning up and refactored for better readability and documentation
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
