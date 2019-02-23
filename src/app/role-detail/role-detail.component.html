@@ -1,0 +1,18 @@
+<h5>Role Details</h5>
+<a (click) = "deleteRole(role._id)" class="btn btn-danger">Delete</a>
+<a [routerLink]="['edit']" class="btn btn-primary">Edit</a>
+<h2>{{role.roleId}} {{role.roleName}}</h2>
+<div>
+  <p>Role ID: {{role.roleId}}</p>
+  <p>Role Name: {{role.roleName}}</p>
+  
+</div>
+<div>
+  <h5>Permissions:</h5>
+  <p>{{ role.perm1 }} </p>
+  <p>{{ role.perm2 }}</p>
+  <p>{{ role.perm3 }}</p>
+  <p>{{ role.perm4 }} </p>
+  <p>{{ role.perm5 }}</p>
+  <p>{{ role.perm6 }}</p>
+</div>

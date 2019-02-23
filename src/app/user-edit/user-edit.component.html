@@ -1,0 +1,56 @@
+
+<h2>Please <strong>update</strong> {{user.firstName}} {{user.lastName}}'s information:</h2>
+
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="angForm" (ngSubmit)="updateUser(af.firstName.value, af.lastName.value, af.phoneNum.value, af.email.value)">
+      <div class="form-group">
+        <label class="col-md-4">First Name </label>
+        <input type="text" class="form-control" formControlName="firstName" #firstName value="{{user.firstName}}" 
+        [ngClass]="{ 'valid': (submitted && !af.firstName.errors.required) && (af.firstName === user.firstName)}" />
+        <!-- <div *ngIf="(af.firstName.dirty || af.firstName.touched) && af.firstName.errors && af.firstName.invalid" class="alert alert-danger">
+            <div *ngIf="af.firstName.errors.required ||">First Name is required</div>
+          </div> -->
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Last Name </label>
+        <input type="text" class="form-control" formControlName="lastName" #lastName value="{{user.lastName}}" [ngClass]="{ 'is-invalid': submitted && af.lastName.errors }" />
+        <div *ngIf="(af.lastName.dirty || af.lastName.touched) && af.lastName.errors && af.lastName.invalid" class="alert alert-danger">
+          <div *ngIf="af.lastName.errors.required">Last Name is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Phone Number </label>
+        <input type="text" class="form-control" formControlName="phoneNum" #phoneNum value="{{user.phoneNum}}" [ngClass]="{ 'is-invalid': submitted && af.phoneNum.errors }" />
+        <div *ngIf="(af.phoneNum.dirty || af.phoneNum.touched) && af.phoneNum.errors && af.phoneNum.invalid" class="alert alert-danger">
+          <div *ngIf="af.phoneNum.errors.required">Phone number is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Email</label>
+        <input type="text" class="form-control" formControlName="email" #email value="{{user.email}}" [ngClass]="{ 'is-invalid': submitted && af.email.errors.email && af.email.errors }" />
+        <div *ngIf="(af.email.dirty || af.email.touched) && af.email.errors && af.email.invalid" class="alert alert-danger">
+          <div *ngIf="af.email.errors.email">Email must be a valid email address</div>
+          <div *ngIf="af.email.errors.required">Email is required</div>
+        </div>
+      </div>
+      
+      
+      <div class="form-group">
+          <button type="submit" class="btn btn-primary" [disabled]="af.invalid || (af.firstName.invalid || af.lastName.invalid || af.phoneNum.invalid || af.email.invalid)"
+          >Update User</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+  <!-- <div class="form-group">
+      <label class="col-md-4">Phone Number </label>
+      <input type="text" class="form-control" formControlName="phoneNum" #phoneNum value="{{user.phoneNum}}" [ngClass]="{ 'is-invalid': submitted && af.phoneNum.errors }" />
+      <div *ngIf="(af.phoneNum.dirty || af.phoneNum.touched) && af.phoneNum.errors && af.phoneNum.invalid" class="alert alert-danger">
+        <div *ngIf="af.phoneNum.errors.required">Phone number is required</div>
+      </div>
+    </div> -->

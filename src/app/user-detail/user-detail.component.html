@@ -1,0 +1,15 @@
+<h5>User Details</h5>
+<a (click) = "deleteUser(user._id)" class="btn btn-danger">Delete</a>
+<a [routerLink]="['edit']" class="btn btn-primary">Edit</a>
+<h2>{{user.firstName}} {{user.lastName}}</h2>
+<div>
+  <p>User ID: {{user._id}}</p>
+  <p>Phone Number: {{user.phoneNum}}</p>
+  <p>Email: {{user.email}}</p>
+</div>
+<div>
+  <h5>Roles:</h5>
+  <p>RoleNameHere: PermissionsArrayHere</p>
+  <p>RoleNameHere: PermissionsArrayHere</p>
+  <p>RoleNameHere: PermissionsArrayHere</p>
+</div>

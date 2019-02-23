@@ -1,0 +1,29 @@
+<h2>Please fill in your <strong>new role</strong>'s information!</h2>
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="rolForm" (ngSubmit)="addRole(rf.roleId.value, rf.roleName.value)">
+      <div class="form-group">
+        <label class="col-md-4">Role ID </label>
+        <input type="text" class="form-control" formControlName="roleId" #roleId 
+        [ngClass]="{ 'is-invalid': submitted && rf.roleId.errors }" 
+        />
+        <div *ngIf="(rf.roleId.dirty || rf.roleId.touched) && rf.roleId.errors && rf.roleId.invalid" class="alert alert-danger">
+          <div *ngIf="rf.roleId.errors.required">Role ID is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Role Name </label>
+        <input type="text" class="form-control" formControlName="roleName" #roleName [ngClass]="{ 'is-invalid': submitted && rf.roleName.errors }" />
+        <div *ngIf="(rf.roleName.dirty || rf.roleName.touched) && rf.roleName.errors && rf.roleName.invalid" class="alert alert-danger">
+          <div *ngIf="rf.roleName.errors.required">Role Name is required</div>
+        </div>
+      </div>
+      
+      
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" [disabled]="rf.invalid || (rf.roleId.invalid || rf.roleName.invalid)"
+        >Create Role</button>
+      </div>
+    </form>
+  </div>
+</div>

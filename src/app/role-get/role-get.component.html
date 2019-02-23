@@ -1,0 +1,25 @@
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <td>Action</td>
+        <td>Role ID</td>
+        <td>Role Name</td>
+        <td colspan="3">Permissions</td>
+    </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let role of roles">
+            <td><a [routerLink]="['detail', role._id]" class="btn btn-primary">Details</a></td>
+            <td>{{ role.roleId }}</td>
+            <td>{{ role.roleName }}</td>
+            <td>{{ role.perm1 }}</td>
+            <td>{{ role.perm2 }}</td>
+            <td>{{ role.perm3 }}</td>
+            <td>{{ role.perm4 }}</td>
+            <td>{{ role.perm5 }}</td>
+            <td>{{ role.perm6 }}</td>
+        </tr>
+    </tbody>
+    </table>
+    
